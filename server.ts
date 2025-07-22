@@ -9,6 +9,7 @@ import otherRoutes from "./routes/otherRoutes";
 import { scheduleCleanCloudinary } from './config/cloudinary';
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 connectToDatabase();
 
@@ -20,7 +21,7 @@ app.use(bodyParser.urlencoded({ limit: "150kb", extended: true }));
 app.use("/cdm-data", cdmRoutes);
 app.use("/", otherRoutes);
 
-app.listen(3000, () => console.log('Server Started'));
+app.listen(port, () => console.log('Server Started'));
 
 scheduleCleanCloudinary();
 
