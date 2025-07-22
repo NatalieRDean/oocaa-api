@@ -6,7 +6,7 @@
   "scripts": {
     "devStart": "cross-env NODE_OPTIONS=--max_old_space_size=8192 nodemon server.ts",
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "node dist/server.ts",
     "test": "mocha",
     "testNotifs": "ts-node test/testCDMNotification.ts"
   },
